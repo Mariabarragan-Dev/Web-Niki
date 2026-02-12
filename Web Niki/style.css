@@ -1,0 +1,434 @@
+* {}
+
+:root {
+    --color-principal: black;
+    --tipo-letra: Arial Rounded MT Bold;
+    --tipo-letra-2: Roboto;
+    --background-color1: #D4805D;
+    --background-color2: #F5EFEA;
+    --background-color3: #382920;
+    --background-color4: #E6CEB5;
+}
+
+body {
+
+    /* Eliminamos el margen por defecto del navegador */
+    margin: 0;
+
+    /* Fuente base de la página */
+    font-family: Arial Rounded MT Bold, Roboto;
+
+    /* Color base del texto */
+    color: black;
+
+    /* Altura de línea para mejorar legibilidad */
+    line-height: 1.35;
+}
+
+img {
+
+    /* La imagen nunca será más ancha que su contenedor */
+    max-width: 100%;
+
+    /* Evita el pequeño espacio inferior que dejan las imágenes inline */
+    display: block;
+}
+
+
+header {
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    height: 100px;
+}
+
+header .logo {
+    position: fixed;
+    top: -10px;
+    left: 50px;
+    margin: 0;
+    padding: 0;
+    z-index: 1001;
+
+}
+
+header .logo img {
+    height: 100px;
+    width: auto;
+    margin-bottom: 0;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color1);
+    padding: 10px 20px;
+    padding-left: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-links a {
+    font-family: Arial Rounded MT Bold;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    color: var(--background-color3);
+}
+
+.nav-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+
+
+}
+
+.hero {
+    position: relative;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero img {
+    max-width: 90%;
+    max-height: 350px;
+    margin: 0 auto;
+    object-fit: contain;
+    margin-top: 50px;
+
+}
+
+header h1 {
+    font-family: Arial Rounded MT Bold;
+    font-size: 2.4rem;
+    margin-top: 30px;
+    color: #8B5A3C;
+    padding-top: 90px;
+    z-index: 10;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.intro {
+    text-align: center;
+    font-family: var(--tipo-letra-1);
+    font-size: 1.5em;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    padding: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.3), 0 8px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--background-color4);
+}
+
+.btn-reserva {
+    display: inline-block;
+    background-color: var(--background-color3);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.btn-reserva:hover {
+    background-color: var(--background-color2);
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 0 5px #382920, 0 0 50px #ac8369, 0 0 40px #382920;
+}
+
+.servicios-preview {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.servicios-preview h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--background-color3);
+}
+
+.servicios-grid-inicio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.servicio-box {
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.servicio-box:hover {
+    transform: translateY(-5px);
+}
+
+.servicio-box img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    object-fit: contain;
+}
+
+.servicio-box h3 {
+    font-size: 1.2rem;
+    color: var(--background-color3);
+}
+
+.btn-ver-servicios {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--background-color1);
+    padding: 12px 30px;
+    border: 2px solid var(--background-color1);
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-ver-servicios:hover {
+    background-color: var(--background-color1);
+    color: white;
+}
+
+/* Por qué elegirnos */
+.por-que-elegirnos {
+    padding: 80px 20px;
+    background-color: var(--background-color2);
+    text-align: center;
+}
+
+.por-que-elegirnos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--background-color3);
+}
+
+.razones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.razon {
+    padding: 30px 20px;
+}
+
+.razon .icono {
+    font-size: 3rem;
+    color: var(--background-color1);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.razon h3 {
+    font-size: 1.4rem;
+    color: var(--background-color3);
+    margin-bottom: 10px;
+}
+
+.razon p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Reserva final */
+.reserva-final {
+    font-family: var(--tipo-letra-1);
+    padding: 80px 20px;
+    background-color: var(--background-color1);
+    text-align: center;
+    color: white;
+}
+
+.reserva-final h2 {
+    font-family: var(--tipo-letra-1);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.reserva-final p {
+    font-family: var(--tipo-letra-1);
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.btn-reserva-blanco {
+    display: inline-block;
+    background-color: white;
+    color: var(--background-color1);
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-reserva-blanco:hover {
+    background-color: var(--background-color3);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/*footer*/
+.nav-cookies {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 30px;
+
+    gap: 20px;
+    background-color: var(--background-color2);
+
+
+}
+
+.footer-logo {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.footer-logo img {
+    height: 100px;
+    width: auto;
+
+
+}
+
+.ultimo-logo {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+
+
+}
+
+.footer-img {
+    height: 50px;
+    width: auto;
+}
+
+.footer-img1 {
+    height: 60px;
+    width: auto;
+
+}
+
+.derechos {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Servicios */
+.servicios {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.servicios h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--background-color3);
+    margin-bottom: 60px;
+}
+
+.servicios-grid-servicios {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* Cada caja de servicio */
+.servicio-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-color2);
+    padding: 50px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servicio-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.servicio-box>img:first-child {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+
+
+.servicio-box figcaption {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.servicio-box figcaption h3 {
+    font-family: var(--tipo-letra);
+    font-size: 2.2rem;
+    color: var(--background-color3);
+    margin-bottom: 25px;
+}
+
+.servicio-box figcaption p {
+    font-family: var(--tipo-letra);
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.servicio-box>img:last-child {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
