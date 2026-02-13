@@ -360,80 +360,122 @@ header h1 {
 }
 
 /* Servicios */
-.servicios {
-    padding: 80px 20px;
-    background-color: white;
-}
-
 .servicios h2 {
+    background: linear-gradient(135deg, var(--background-color3) 0%, #2a1f18 100%);
+    color: white;
+    padding: 140px 60px 100px;
+    
     text-align: center;
-    font-size: 2.5rem;
-    color: var(--background-color3);
-    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    font-family: var(--tipo-letra);
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 0;
 }
 
+
+
+/* GRID DE SERVICIOS */
 .servicios-grid-servicios {
-    max-width: 1400px;
+    max-width: 1200px;
+    
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 0;
+    
+    margin-top: 0;
+    padding: 80px 40px 100px;
+    
 }
 
-/* Cada caja de servicio */
-.servicio-box {
-    display: flex;
-    flex-direction: column;
+/* CAJAS DE SERVICIO - Más profesionales */
+.servicios-grid-servicios .servicio-box {
+    display: grid;
+    
+    grid-template-columns: 200px 1fr 400px;
+    
+    gap: 60px;
     align-items: center;
-    text-align: center;
+    text-align: left;
+    
+    background-color: white;
+    
+    padding: 80px 60px;
+    border-radius: 0;
+    
+    box-shadow: none;
+    
+    border-bottom: 1px solid #e8e6e1;
+    
+    transition: background-color 0.3s ease;
+    margin-bottom: 0;
+}
+
+.servicios-grid-servicios .servicio-box:nth-child(even) {
+    background-color: #fafaf8;
+    /* Alternar fondos */
+    grid-template-columns: 400px 1fr 200px;
+    /* Invertir orden */
+    direction: rtl;
+}
+
+.servicios-grid-servicios .servicio-box:nth-child(even) > * {
+    direction: ltr;
+}
+
+.servicios-grid-servicios .servicio-box:hover {
+    transform: none;
+    
+    box-shadow: none;
     background-color: var(--background-color2);
-    padding: 50px 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.servicio-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-
-.servicio-box>img:first-child {
-    width: 150px;
-    height: 150px;
+/* ICONO DEL SERVICIO */
+.servicios-grid-servicios .servicio-box > img:first-child {
+    width: 180px;
+    height: 180px;
     object-fit: contain;
-    margin-bottom: 30px;
+    margin: 0;
+    
 }
 
-
-.servicio-box figcaption {
-    max-width: 800px;
-    margin-bottom: 40px;
+/* TEXTO DEL SERVICIO */
+.servicios-grid-servicios .servicio-box figcaption {
+    max-width: none;
+    
+    margin: 0;
+    
 }
 
-.servicio-box figcaption h3 {
+.servicios-grid-servicios .servicio-box figcaption h3 {
     font-family: var(--tipo-letra);
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: var(--background-color3);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.servicio-box figcaption p {
-    font-family: var(--tipo-letra);
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: #333;
+.servicios-grid-servicios .servicio-box figcaption p {
+    font-family: var(--tipo-letra-2);
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #444;
+    margin: 0;
 }
 
-.servicio-box>img:last-child {
+/* IMAGEN DEL PERRO */
+.servicios-grid-servicios .servicio-box > img:last-child {
     width: 100%;
-    max-width: 600px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    height: 350px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
+
 /*Sobre nosotros*/
 .sobre-nosotros {
     padding: 0;
@@ -455,17 +497,6 @@ header h1 {
     font-size: 4rem;
     font-weight: bold;
     letter-spacing: 1px;
-}
-
-.sobre-nosotros h2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23ffffff" opacity="0.03"/></svg>');
-    background-size: 40px 40px;
 }
 
 .sobre-nosotros p {
@@ -549,17 +580,6 @@ header h1 {
     font-size: 4rem;
     font-weight: bold;
     letter-spacing: 1px;
-}
-
-.mapas h2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="%23ffffff" opacity="0.03"/></svg>');
-    background-size: 40px 40px;
 }
 
 .mapas ul {
