@@ -14,25 +14,25 @@
 
 body {
 
-    /* Eliminamos el margen por defecto del navegador */
+    
     margin: 0;
 
-    /* Fuente base de la página */
+    
     font-family: Arial Rounded MT Bold, Roboto;
 
-    /* Color base del texto */
+   
     color: black;
 
-    /* Altura de línea para mejorar legibilidad */
+    
     line-height: 1.35;
 }
 
 img {
 
-    /* La imagen nunca será más ancha que su contenedor */
+    
     max-width: 100%;
 
-    /* Evita el pequeño espacio inferior que dejan las imágenes inline */
+    
     display: block;
 }
 
@@ -110,29 +110,67 @@ header .logo img {
 }
 
 .hero {
-    position: relative;
+      position: relative;
+    padding: 20px 20px 40px;
+    /* Reducir padding superior */
+    text-align: center;
+    z-index: 1;
+    /*position: relative;
     padding: 40px 20px;
     text-align: center;
+    z-index: 1;*/
+    
 }
 
 .hero img {
-    max-width: 90%;
-    max-height: 350px;
+        max-width: 80%;
+    max-height: 250px;
     margin: 0 auto;
     object-fit: contain;
-    margin-top: 50px;
+    margin-top: 20px;
+    /* Reducir de 100px a 20px */
+    position: relative;
+    z-index: 1;
+    /* Muy bajo */
+    
+    /*max-width: 80%;
+    max-height: 250px;
+    margin: 0 auto;
+    object-fit: contain;
+    margin-top: 20px;*/
 
 }
 
 header h1 {
-    font-family: Arial Rounded MT Bold;
+     font-family: var(--tipo-letra);
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--background-color3);
+    padding: 20px 40px;
+    padding-top: 100px;
+    text-align: center;
+    text-shadow: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1002;
+    
+    background: white;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+   
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    /*font-family: Arial Rounded MT Bold;
     font-size: 2.4rem;
     margin-top: 30px;
     color: #8B5A3C;
     padding-top: 90px;
     z-index: 10;
     text-align: center;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);*/
 }
 
 .intro {
@@ -685,4 +723,32 @@ header h1 {
     right: 40px;
     line-height: 1;
     z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.servicios h2::before,
+.sobre-nosotros h2::before,
+.mapas h2::before {
+    content: 'NIKI GROOMING';
+    display: block;
+    font-family: var(--tipo-letra);
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 20px;
+    background: none !important;
+    position: relative;
+    z-index: 1;
 }
