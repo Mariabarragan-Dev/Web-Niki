@@ -14,25 +14,25 @@
 
 body {
 
-    
+
     margin: 0;
 
-    
+
     font-family: Arial Rounded MT Bold, Roboto;
 
-   
+
     color: black;
 
-    
+
     line-height: 1.35;
 }
 
 img {
 
-    
+
     max-width: 100%;
 
-    
+
     display: block;
 }
 
@@ -112,12 +112,12 @@ header .logo img {
 .hero {
     position: relative;
     padding: 20px 20px 40px;
-    
+
     text-align: center;
     z-index: 1;
     margin-top: 100px;
-   
-    
+
+
 }
 
 .hero img {
@@ -129,7 +129,7 @@ header .logo img {
 
     position: relative;
     z-index: 1;
- 
+
 
 }
 
@@ -150,7 +150,7 @@ header .logo img {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
-   
+
 }
 
 .intro {
@@ -161,7 +161,7 @@ header .logo img {
     margin-bottom: 5%;
     padding: 5px;
     color: var(--background-color3);
-    
+
 }
 
 .btn-reserva {
@@ -382,7 +382,7 @@ header .logo img {
     background: linear-gradient(135deg, var(--background-color3) 0%, #2a1f18 100%);
     color: white;
     padding: 140px 60px 100px;
-    
+
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -399,36 +399,36 @@ header .logo img {
 /* GRID DE SERVICIOS */
 .servicios-grid-servicios {
     max-width: 1200px;
-    
+
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 0;
-    
+
     margin-top: 0;
     padding: 80px 40px 100px;
-    
+
 }
 
 /* CAJAS DE SERVICIO  */
 .servicios-grid-servicios .servicio-box {
     display: grid;
-    
+
     grid-template-columns: 200px 1fr 400px;
-    
+
     gap: 60px;
     align-items: center;
     text-align: left;
-    
+
     background-color: white;
-    
+
     padding: 80px 60px;
     border-radius: 0;
-    
+
     box-shadow: none;
-    
+
     border-bottom: 1px solid #e8e6e1;
-    
+
     transition: background-color 0.3s ease;
     margin-bottom: 0;
 }
@@ -441,32 +441,32 @@ header .logo img {
     direction: rtl;
 }
 
-.servicios-grid-servicios .servicio-box:nth-child(even) > * {
+.servicios-grid-servicios .servicio-box:nth-child(even)>* {
     direction: ltr;
 }
 
 .servicios-grid-servicios .servicio-box:hover {
     transform: none;
-    
+
     box-shadow: none;
     background-color: var(--background-color2);
 }
 
 /* ICONO DEL SERVICIO */
-.servicios-grid-servicios .servicio-box > img:first-child {
+.servicios-grid-servicios .servicio-box>img:first-child {
     width: 180px;
     height: 180px;
     object-fit: contain;
     margin: 0;
-    
+
 }
 
 /* TEXTO DEL SERVICIO */
 .servicios-grid-servicios .servicio-box figcaption {
     max-width: none;
-    
+
     margin: 0;
-    
+
 }
 
 .servicios-grid-servicios .servicio-box figcaption h3 {
@@ -486,7 +486,7 @@ header .logo img {
 }
 
 /* IMAGEN DEL PERRO */
-.servicios-grid-servicios .servicio-box > img:last-child {
+.servicios-grid-servicios .servicio-box>img:last-child {
     width: 100%;
     height: 350px;
     object-fit: cover;
@@ -630,7 +630,7 @@ header .logo img {
     direction: rtl;
 }
 
-.mapas ul li:nth-child(even) figure > * {
+.mapas ul li:nth-child(even) figure>* {
     direction: ltr;
 }
 
@@ -730,14 +730,13 @@ header .logo img {
     text-transform: uppercase;
     opacity: 0.7;
     margin-bottom: 20px;
-    background: none ;
+    background: none;
     position: relative;
     z-index: 1;
     margin-top: 0;
 }
-/* ========================================
-   TABLET GRANDE / LANDSCAPE (max-width: 1024px)
-   ======================================== */
+
+/* TABLET GRANDE (max-width: 1024px)*/
 @media (max-width: 1024px) {
 
     .servicios-grid-servicios .servicio-box {
@@ -750,7 +749,7 @@ header .logo img {
         grid-template-columns: 300px 1fr 150px;
     }
 
-    .servicios-grid-servicios .servicio-box > img:last-child {
+    .servicios-grid-servicios .servicio-box>img:last-child {
         height: 280px;
     }
 
@@ -771,23 +770,21 @@ header .logo img {
     }
 }
 
-/* ========================================
-   Movil (max-width: 768px)
-   ======================================== */
+/*Movil*/
 @media (max-width: 768px) {
 
-    /* NAVBAR - horizontal, sin columnas */
+    /* NAVBAR */
     .navbar {
         padding-left: 130px;
         padding-right: 10px;
         height: 80px;
         flex-wrap: nowrap;
         overflow-x: auto;
-        scrollbar-width: none; /* Firefox */
+        scrollbar-width: none;
     }
 
     .navbar::-webkit-scrollbar {
-        display: none; /* Chrome/Safari */
+        display: none;
     }
 
     .nav-links {
@@ -814,16 +811,25 @@ header .logo img {
         height: 80px;
     }
 
-    /* HERO - espacio correcto bajo navbar */
+    /* HERO */
     .hero {
-        margin-top: 100px;
+        margin-top: 30px;
     }
 
-    /* ESLOGAN - sin padding-top exagerado para no solaparse con imagen */
+    /* ESLOGAN */
+    header {
+        height: auto;
+        padding-bottom: 0;
+        margin-top: 30px;
+    }
+
     .h1 {
+        position: static;
+        display: block;
         font-size: 1.8rem;
-        padding: 20px 20px;
-        padding-top: 20px;
+        padding: 90px 20px 10px;
+        z-index: auto;
+        margin: 0;
     }
 
     .intro {
@@ -861,13 +867,13 @@ header .logo img {
         direction: ltr;
     }
 
-    .servicios-grid-servicios .servicio-box > img:first-child {
+    .servicios-grid-servicios .servicio-box>img:first-child {
         width: 130px;
         height: 130px;
         margin: 0 auto;
     }
 
-    .servicios-grid-servicios .servicio-box > img:last-child {
+    .servicios-grid-servicios .servicio-box>img:last-child {
         height: 250px;
         width: 100%;
     }
@@ -951,12 +957,10 @@ header .logo img {
     }
 }
 
-/* ========================================
-   MÓVIL (max-width: 480px)
-   ======================================== */
+/* MÓVIL (max-width: 480px)*/
 @media (max-width: 480px) {
 
-    /* NAVBAR - horizontal, compacto, sin columnas */
+    /* NAVBAR */
     .navbar {
         padding-left: 110px;
         padding-right: 5px;
@@ -996,14 +1000,22 @@ header .logo img {
 
     /* HERO */
     .hero {
-        margin-top: 90px;
+        margin-top: 30px;
     }
 
-    /* ESLOGAN - sin padding-top para no solaparse con imagen */
+    /* ESLOGAN */
+    header {
+        height: auto;
+        margin-top: 30px;
+    }
+
     .h1 {
+        position: static;
+        display: block;
         font-size: 1.4rem;
-        padding: 15px 15px;
-        padding-top: 15px;
+        padding: 80px 15px 10px;
+        z-index: auto;
+        margin: 0;
     }
 
     .intro {
