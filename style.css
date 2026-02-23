@@ -775,7 +775,7 @@ header .logo img {
 
     /* NAVBAR */
     .navbar {
-        padding-left: 95px/*130px*/;
+        padding-left: 80px/*130px*/;
         padding-right: 10px;
         height: 80px;
         flex-wrap: nowrap;
@@ -808,7 +808,7 @@ header .logo img {
     }
 
     header .logo img {
-        height: 80px;
+        height: 65px;
     }
 
     /* HERO */
@@ -819,15 +819,15 @@ header .logo img {
     /* ESLOGAN */
     header {
         height: auto;
-        padding-bottom: 0;
+        /*padding-bottom: 0;*/
         margin-top: 0;
     }
 
     .h1 {
         position: static;
         display: block;
-        font-size: 1.8rem;
-        padding: 90px 20px 10px;
+        font-size: 1.5rem;
+        padding: 75px 15px 0px/*90px 20px 10px*/;
         z-index: auto;
         margin: 0;
     }
