@@ -773,9 +773,9 @@ header .logo img {
 /*Movil*/
 @media (max-width: 768px) {
 
-    /* NAVBAR */
+   
     .navbar {
-        padding-left: 80px/*130px*/;
+        padding-left: 110px;
         padding-right: 10px;
         height: 80px;
         flex-wrap: nowrap;
@@ -788,12 +788,20 @@ header .logo img {
     }
 
     .nav-links {
+        display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 0;
         padding: 0;
-        justify-content: flex-start;
-        flex: unset;
+        justify-content: space-evenly;
+        min-width: unset;
+        flex: 1;
+        align-items: center;
+        min-width: max-content;
+    }
+
+    .nav-links li {
+        flex-shrink: 0;
     }
 
     .nav-links a {
@@ -802,13 +810,27 @@ header .logo img {
         white-space: nowrap;
     }
 
+    
+    .nav-links li:has(.nav-img) {
+        flex-shrink: 0;
+    }
+
+    .nav-img {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        min-height: 34px;
+        object-fit: contain;
+        display: block;
+    }
+
     header .logo {
-        top: -10px;
-        left: 5px;
+        top: -5px;
+        left: 20px;
     }
 
     header .logo img {
-        height: 65px;
+        height: 80px;
     }
 
     /* HERO */
@@ -816,10 +838,8 @@ header .logo img {
         margin-top: 10px;
     }
 
-    /* ESLOGAN */
     header {
         height: auto;
-        /*padding-bottom: 0;*/
         margin-top: 0;
     }
 
@@ -827,9 +847,10 @@ header .logo img {
         position: static;
         display: block;
         font-size: 1.5rem;
-        padding: 75px 15px 0px/*90px 20px 10px*/;
+        padding: 75px 15px 0px;
         z-index: auto;
         margin: 0;
+        margin-top: 40px;
     }
 
     .intro {
@@ -842,7 +863,7 @@ header .logo img {
         padding: 12px 30px;
     }
 
-    /* SECCIONES CON GRADIENTE */
+    /*SECCIONES CON GRADIENTE*/
     .servicios h2,
     .sobre-nosotros h2,
     .mapas h2 {
@@ -850,36 +871,65 @@ header .logo img {
         padding: 120px 30px 80px;
     }
 
-    /* SERVICIOS GRID */
+    
     .servicios-grid-servicios {
         padding: 40px 20px 60px;
     }
 
     .servicios-grid-servicios .servicio-box {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        gap: 30px;
+        gap: 24px;
         padding: 50px 30px;
-    }
-
-    .servicios-grid-servicios .servicio-box:nth-child(even) {
-        grid-template-columns: 1fr;
         direction: ltr;
     }
 
-    .servicios-grid-servicios .servicio-box>img:first-child {
-        width: 130px;
-        height: 130px;
-        margin: 0 auto;
+    
+    .servicios-grid-servicios .servicio-box:nth-child(even) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-template-columns: unset;
+        direction: ltr;
     }
 
+    .servicios-grid-servicios .servicio-box:nth-child(even)>* {
+        direction: ltr;
+    }
+
+    /* Icono */
+    .servicios-grid-servicios .servicio-box>img:first-child {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        flex-shrink: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    
     .servicios-grid-servicios .servicio-box>img:last-child {
-        height: 250px;
+        width: 100%;
+        max-width: 350%;
+        height: 220px;
+        object-fit: contain;
+        background-color: white;
+       box-shadow: none;
+        flex-shrink: 0;
+    }
+
+    .servicios-grid-servicios .servicio-box figcaption {
         width: 100%;
     }
 
     .servicios-grid-servicios .servicio-box figcaption h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .servicios-grid-servicios .servicio-box figcaption p {
+        font-size: 1rem;
     }
 
     /* POR QUÉ ELEGIRNOS */
@@ -888,7 +938,7 @@ header .logo img {
         gap: 25px;
     }
 
-    /* SOBRE NOSOTROS */
+   
     .sobre-nosotros p {
         font-size: 1rem;
         padding: 0 20px;
@@ -904,17 +954,21 @@ header .logo img {
     }
 
     .niki-img {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
         padding: 0 20px 60px;
         margin: 40px auto;
     }
 
     .niki-img img {
-        height: 300px;
+        width: 100%;
+        height: auto;           
+        aspect-ratio: 4 / 5;   
+        object-fit: cover;
+        
     }
 
-    /* CONTACTO / MAPAS */
+   
     .mapas ul li {
         padding: 15px;
     }
@@ -929,11 +983,20 @@ header .logo img {
     }
 
     .mapas ul li figure iframe {
-        min-height: 300px;
+        min-height: 280px;
     }
 
     .mapas ul li figure figcaption {
-        padding: 50px 30px;
+        padding: 50px 30px 40px;
+        overflow: hidden;       
+    }
+
+    
+    .mapas ul li figure figcaption::before {
+        font-size: 5rem;        
+        top: 10px;
+        right: 20px;
+        opacity: 0.12;
     }
 
     .mapas ul li figure figcaption strong {
@@ -945,7 +1008,7 @@ header .logo img {
         font-size: 1rem;
     }
 
-    /* FOOTER */
+    /* ── FOOTER ── */
     .nav-cookies {
         flex-direction: column;
         text-align: center;
@@ -957,12 +1020,13 @@ header .logo img {
     }
 }
 
+
 /* MÓVIL (max-width: 480px)*/
 @media (max-width: 480px) {
 
-    /* NAVBAR*/
+    /* NAVBAR */
     .navbar {
-        padding-left: 110px;
+        padding-left: 85px;
         padding-right: 5px;
         height: 70px;
         flex-wrap: nowrap;
@@ -981,12 +1045,25 @@ header .logo img {
         padding: 0;
         justify-content: flex-start;
         flex: unset;
+        min-width: max-content;
+        align-items: center;
+    }
+
+    .nav-links li {
+        flex-shrink: 0;
     }
 
     .nav-links a {
         font-size: 12px;
         padding: 5px 8px;
         white-space: nowrap;
+    }
+
+    .nav-img {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        min-height: 28px;
     }
 
     header .logo {
@@ -998,12 +1075,11 @@ header .logo img {
         height: 70px;
     }
 
-    /* HERO */
+    /*HERO*/
     .hero {
         margin-top: 30px;
     }
 
-    /* ESLOGAN */
     header {
         height: auto;
         margin-top: 30px;
@@ -1027,7 +1103,7 @@ header .logo img {
         padding: 10px 25px;
     }
 
-    /* SECCIONES CON GRADIENTE */
+    /*SECCIONES CON GRADIENTE */
     .servicios h2,
     .sobre-nosotros h2,
     .mapas h2 {
@@ -1042,7 +1118,7 @@ header .logo img {
         letter-spacing: 2px;
     }
 
-    /* SERVICIOS */
+    /*SERVICIOS */
     .servicios-grid-servicios .servicio-box {
         padding: 35px 20px;
     }
@@ -1055,7 +1131,11 @@ header .logo img {
         font-size: 1rem;
     }
 
-    /* POR QUÉ ELEGIRNOS */
+    .servicios-grid-servicios .servicio-box>img:last-child {
+        height: 190px;
+    }
+
+    /* POR QUÉ ELEGIRNOS*/
     .razones-grid {
         grid-template-columns: 1fr;
     }
@@ -1066,18 +1146,22 @@ header .logo img {
         font-size: 1.8rem;
     }
 
-    /* SOBRE NOSOTROS */
+    /* SOBRE NOSOTROS*/
     .sobre-nosotros p:first-of-type::first-letter {
         font-size: 2.8rem;
     }
 
     .niki-img img {
-        height: 220px;
+        aspect-ratio: 2 / 4;
+        height: auto;
+        aspect-ratio: 4 / 5;   
+        object-fit: cover;
+    
     }
 
     /* MAPAS */
     .mapas ul li figure figcaption {
-        padding: 35px 20px;
+        padding: 35px 20px 30px;
     }
 
     .mapas ul li figure figcaption strong {
@@ -1085,10 +1169,12 @@ header .logo img {
     }
 
     .mapas ul li figure figcaption::before {
-        font-size: 5rem;
+        font-size: 4rem;
+        top: 8px;
+        right: 15px;
     }
 
-    /* FOOTER */
+    /*FOOTER */
     .footer-logo img {
         height: 70px;
     }
@@ -1107,3 +1193,4 @@ header .logo img {
         justify-content: center;
     }
 }
+
