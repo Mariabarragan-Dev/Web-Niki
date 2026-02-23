@@ -775,7 +775,7 @@ header .logo img {
 
     /* NAVBAR */
     .navbar {
-        padding-left: 130px;
+        padding-left: 95px/*130px*/;
         padding-right: 10px;
         height: 80px;
         flex-wrap: nowrap;
@@ -791,20 +791,20 @@ header .logo img {
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 0;
-        padding: 40px;
+        padding: 0;
         justify-content: flex-start;
         flex: unset;
     }
 
     .nav-links a {
         font-size: 13px;
-        padding: 20px;
+        padding: 6px 10px;
         white-space: nowrap;
     }
 
     header .logo {
         top: -10px;
-        left: 20px;
+        left: 5px;
     }
 
     header .logo img {
@@ -813,14 +813,14 @@ header .logo img {
 
     /* HERO */
     .hero {
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
     /* ESLOGAN */
     header {
         height: auto;
         padding-bottom: 0;
-        margin-top: 30px;
+        margin-top: 0;
     }
 
     .h1 {
@@ -960,7 +960,7 @@ header .logo img {
 /* MÓVIL (max-width: 480px)*/
 @media (max-width: 480px) {
 
-    /* NAVBAR */
+    /* NAVBAR*/
     .navbar {
         padding-left: 110px;
         padding-right: 5px;
