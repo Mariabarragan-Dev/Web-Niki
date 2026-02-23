@@ -1054,16 +1054,16 @@ header .logo img {
     }
 
     .nav-links a {
-        font-size: 12px;
-        padding: 5px 8px;
+        font-size: 11px;
+        padding: 5px 5px;
         white-space: nowrap;
     }
 
     .nav-img {
-        width: 28px;
-        height: 28px;
-        min-width: 28px;
-        min-height: 28px;
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
     }
 
     header .logo {
