@@ -1026,8 +1026,8 @@ header .logo img {
 
     /* NAVBAR */
     .navbar {
-        padding-left: 85px;
-        padding-right: 5px;
+        padding-left: 80px;
+        padding-right: 0;
         height: 70px;
         flex-wrap: nowrap;
         overflow-x: auto;
