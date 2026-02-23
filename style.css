@@ -735,3 +735,311 @@ header .logo img {
     z-index: 1;
     margin-top: 0;
 }
+/* ========================================
+   TABLET GRANDE / LANDSCAPE (max-width: 1024px)
+   ======================================== */
+@media (max-width: 1024px) {
+
+    .servicios-grid-servicios .servicio-box {
+        grid-template-columns: 150px 1fr 300px;
+        gap: 40px;
+        padding: 60px 40px;
+    }
+
+    .servicios-grid-servicios .servicio-box:nth-child(even) {
+        grid-template-columns: 300px 1fr 150px;
+    }
+
+    .servicios-grid-servicios .servicio-box > img:last-child {
+        height: 280px;
+    }
+
+    .mapas ul li figure figcaption {
+        padding: 60px 60px;
+    }
+
+    .mapas ul li figure figcaption strong {
+        font-size: 1.8rem;
+    }
+
+    .niki-img {
+        gap: 25px;
+    }
+
+    .niki-img img {
+        height: 350px;
+    }
+}
+
+/* ========================================
+   TABLET (max-width: 768px)
+   ======================================== */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding-left: 20px;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    header .logo img {
+        height: 70px;
+    }
+
+    /* HERO */
+    .hero {
+        margin-top: 140px;
+    }
+
+    .h1 {
+        font-size: 1.8rem;
+        padding: 60px 20px 20px;
+    }
+
+    .intro {
+        font-size: 1.2em;
+        margin-top: 5%;
+    }
+
+    .btn-reserva {
+        font-size: 22px;
+        padding: 12px 30px;
+    }
+
+    /* SECCIONES CON GRADIENTE */
+    .servicios h2,
+    .sobre-nosotros h2,
+    .mapas h2 {
+        font-size: 2.5rem;
+        padding: 120px 30px 80px;
+    }
+
+    /* SERVICIOS GRID */
+    .servicios-grid-servicios {
+        padding: 40px 20px 60px;
+    }
+
+    .servicios-grid-servicios .servicio-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+        padding: 50px 30px;
+    }
+
+    .servicios-grid-servicios .servicio-box:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+    }
+
+    .servicios-grid-servicios .servicio-box > img:first-child {
+        width: 130px;
+        height: 130px;
+        margin: 0 auto;
+    }
+
+    .servicios-grid-servicios .servicio-box > img:last-child {
+        height: 250px;
+        width: 100%;
+    }
+
+    .servicios-grid-servicios .servicio-box figcaption h3 {
+        font-size: 2rem;
+    }
+
+    /* POR QUÉ ELEGIRNOS */
+    .razones-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    /* SOBRE NOSOTROS */
+    .sobre-nosotros p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    .sobre-nosotros p:first-of-type::first-letter {
+        font-size: 3.5rem;
+    }
+
+    .sobre-nosotros p:last-of-type {
+        padding: 30px 30px;
+        margin: 40px auto;
+    }
+
+    .niki-img {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px 60px;
+        margin: 40px auto;
+    }
+
+    .niki-img img {
+        height: 300px;
+    }
+
+    /* CONTACTO / MAPAS */
+    .mapas ul li {
+        padding: 15px;
+    }
+
+    .mapas ul li figure {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .mapas ul li:nth-child(even) figure {
+        direction: ltr;
+    }
+
+    .mapas ul li figure iframe {
+        min-height: 300px;
+    }
+
+    .mapas ul li figure figcaption {
+        padding: 50px 30px;
+    }
+
+    .mapas ul li figure figcaption strong {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .mapas ul li figure figcaption p {
+        font-size: 1rem;
+    }
+
+    /* FOOTER */
+    .nav-cookies {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .ultimo-logo {
+        gap: 30px;
+    }
+}
+
+/* ========================================
+   MÓVIL (max-width: 480px)
+   ======================================== */
+@media (max-width: 480px) {
+
+    /* NAVBAR */
+    .nav-links a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    header .logo img {
+        height: 55px;
+    }
+
+    /* HERO */
+    .h1 {
+        font-size: 1.4rem;
+        padding: 40px 15px 15px;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .btn-reserva {
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+
+    /* SECCIONES CON GRADIENTE */
+    .servicios h2,
+    .sobre-nosotros h2,
+    .mapas h2 {
+        font-size: 1.8rem;
+        padding: 100px 20px 60px;
+    }
+
+    .servicios h2::before,
+    .sobre-nosotros h2::before,
+    .mapas h2::before {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    /* SERVICIOS */
+    .servicios-grid-servicios .servicio-box {
+        padding: 35px 20px;
+    }
+
+    .servicios-grid-servicios .servicio-box figcaption h3 {
+        font-size: 1.6rem;
+    }
+
+    .servicios-grid-servicios .servicio-box figcaption p {
+        font-size: 1rem;
+    }
+
+    /* POR QUÉ ELEGIRNOS */
+    .razones-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .por-que-elegirnos h2,
+    .servicios-preview h2,
+    .reserva-final h2 {
+        font-size: 1.8rem;
+    }
+
+    /* SOBRE NOSOTROS */
+    .sobre-nosotros p:first-of-type::first-letter {
+        font-size: 2.8rem;
+    }
+
+    .niki-img img {
+        height: 220px;
+    }
+
+    /* MAPAS */
+    .mapas ul li figure figcaption {
+        padding: 35px 20px;
+    }
+
+    .mapas ul li figure figcaption strong {
+        font-size: 1.3rem;
+    }
+
+    .mapas ul li figure figcaption::before {
+        font-size: 5rem;
+    }
+
+    /* FOOTER */
+    .footer-logo img {
+        height: 70px;
+    }
+
+    .footer-img {
+        height: 35px;
+    }
+
+    .footer-img1 {
+        height: 45px;
+    }
+
+    .ultimo-logo {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
